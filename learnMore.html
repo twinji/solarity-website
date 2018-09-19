@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solarity | Learn More</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="css/stylesheet.css" rel="stylesheet"/>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/login.js" type="text/javascript"></script>
+        <script src="js/feedbackDonate.js" type="text/javascript"></script>
+    </head>
+    <body onload="initLogin();">
+        <nav class="opaque">
+            <div>
+                <a href="index.html"><div class="nav-logo">&#9728; SOLARITY</div></a>
+                <div class="nav-button">
+                    LEARN
+                    <br/>
+                    <div class="drop-interface">
+                        <a href="explorer.html"><button>EXPLORE</button><br/></a>
+                        <a href="learnMore.html"><button>LEARN MORE</button><br/></a>
+                        <a href="employment.html"><button>EMPLOYMENT</button><br/></a>
+                    </div>
+                </div>
+                <a href="about.html"><div class="nav-button">ABOUT</div></a>
+                <a href="shop.html"><div class="nav-button">SHOP</div></a>
+                <div class="nav-button" id="login-button"><span id="login-text">LOGIN</span><br/>
+                    <div class="drop-interface" id="login-interface">
+                        <form id="login-form" name="loginForm">
+                            Username&nbsp;&nbsp;<input id="login-username" type="text" placeholder="myUsername"/><br/>
+                            Password&nbsp;&nbsp;<input id="login-password" type="password" placeholder="myPassword123"/><br/>
+                            <span id="login-error-text"></span>
+                            <input onclick="login(loginUsername.value, loginPassword.value);" value="LOGIN" type="button"/><br/>
+                            Don't have an account?<br/><a href="createAccount.html"><input value="CREATE ACCOUNT" type="button"/></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="cover small" id="cover"></div>
+        <div class="container">
+            <article>
+                <h1>LEARN MORE</h1>
+                <h3>ABOUT THE UNKNOWN</h3><br/>
+                Explore the links below and learn more now!
+                <br/><br/>
+                <div class="image-button-container">
+                    <a href="https://www.nasa.gov/" target="_blank">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/nasa-button.jpg);">NASA</h3>
+                            <span>NASA.gov brings you the latest news, images and videos from America's space agency!</span>
+                        </div>
+                    </a>
+                    <a href="http://www.spacex.com/" target="_blank">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/spacex-button.jpg);">SPACEX</h3>
+                            <span>SpaceX designs, manufactures and launches advanced rockets and spacecraft!</span>
+                        </div>
+                    </a>
+                    <a href="http://www.space.com/" target="_blank">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/space-button.jpg);">SPACE.COM</h3>
+                            <span>Get the latest<br/>space exploration, innovation and astronomy news.</span>
+                        </div>
+                    </a>
+                    <a href="http://space-facts.com/" target="_blank">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/spacefacts-button.jpg);">SPACE FACTS</h3>
+                            <span>Scientific, historical and cultural facts about space, galaxies, the planets and other objects in the solar system.</span>
+                        </div>
+                    </a>
+                    <a href="http://spaceinfo.com.au/" target="_blank">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/spaceinfo-button.jpg);">SPACEINFO.COM</h3>
+                            <span>An awesome place to read about recent happenings relating to spacecraft, astronauts, and the universe!</span>
+                        </div>
+                    </a>
+                    <a href="http://science.nationalgeographic.com/science/" target="_blank">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/natgeo-button.jpg);">NATIONAL GEOGRAPHIC</h3>
+                            <span>National Geographic has a plethora of information regarding<br/>science and space!</span>
+                        </div>
+                    </a>
+                    <a href="explorer.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/explorer-button.jpg);">EXPLORE</h3>
+                            <span>Explore our solar system in this interactive application!<br/>Click here to begin exploring!</span>
+                        </div>
+                    </a>
+                </div>
+            </article>
+            <aside class="right">
+                <h3>FEEDBACK</h3>
+                Want to help us improve our services? Submit your feedback and/or suggestions below - it'll help us more than you think!
+                <br/><textarea id="feedback-text-area" placeholder="Enter your feedback/suggestions here."></textarea>
+                <button onclick="submitFeedback();">SUBMIT</button>
+                <hr/>
+                <h3>DONATE</h3>
+                Want to support us even further? You can now donate! Any amount is greatly appreciated.
+                <br/><button onclick="donate();">DONATE</button>
+                <hr/>
+                <div class="image-button-container">
+                    <a href="employment.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/employment-button.jpg);">WE'RE HIRING</h3>
+                            <span>We are searching for new staff! If you are in search for a job, we'd love to see your resume!</span>
+                        </div>
+                    </a>
+                    <a href="shop.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/shop-button.jpg);">SHOP</h3>
+                            <span>Browse and purchase some of our awesome collectable items, accessories, and other merch!</span>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+            <div class="i">
+            	<div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+
+            </div>
+        </div>
+        <footer>Copyright &copy; Vishnu Gunapathi 2016</footer>
+    </body>
+</html>

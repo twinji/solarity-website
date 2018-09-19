@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solarity | Shop</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="css/stylesheet.css" rel="stylesheet"/>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/shop.js" type="text/javascript"></script>
+        <script src="js/checkout.js" type="text/javascript"></script>
+        <script src="js/login.js" type="text/javascript"></script>
+        <script src="js/feedbackDonate.js" type="text/javascript"></script>
+    </head>
+    <body onLoad="initShop(); initLogin();">
+        <div class="popup-container hide" id="popup-container">
+        	<span onclick="PopupInterface.hide();">CLOSE</span>
+            <div class="popup-interface" id="popup-interface"></div>
+        </div>
+        <nav class="opaque">
+            <div>
+                <a href="index.html"><div class="nav-logo">&#9728; SOLARITY</div></a>
+                <div class="nav-button">
+                    LEARN
+                    <br/>
+                    <div class="drop-interface">
+                        <a href="explorer.html"><button>EXPLORE</button><br/></a>
+                        <a href="learnMore.html"><button>LEARN MORE</button><br/></a>
+                        <a href="employment.html"><button>EMPLOYMENT</button><br/></a>
+                    </div>
+                </div>
+                <a href="about.html"><div class="nav-button">ABOUT</div></a>
+                <div class="nav-button" id="cart-button">
+                    CART&nbsp;<i id="cart-button-qty"></i>
+                    <div class="drop-interface">
+                        <div class="shopping-cart-container" id="shopping-cart-container"></div>
+                        <button id="clear-button" onclick="ShoppingCart.clear();">CLEAR ALL</button>
+                        <div class="shopping-cart-total" id="shopping-cart-total"></div>
+                        <a id="checkout-button"><input value="CHECKOUT" type="submit"/></a>
+                    </div>
+                </div>
+                <div class="nav-button" id="login-button"><span id="login-text">LOGIN</span><br/>
+                    <div class="drop-interface" id="login-interface">
+                        <form id="login-form" name="loginForm">
+                            Username&nbsp;&nbsp;<input id="login-username" type="text" placeholder="myUsername"/><br/>
+                            Password&nbsp;&nbsp;<input id="login-password" type="password" placeholder="myPassword123"/><br/>
+                            <span id="login-error-text"></span>
+                            <input onclick="login(loginUsername.value, loginPassword.value);" value="LOGIN" type="button"/><br/>
+                            Don't have an account?<br/><a href="createAccount.html"><input value="CREATE ACCOUNT" type="button"/></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="cover small" id="cover"></div>
+        <div class="container">
+            <aside class="left shop">
+                <h1>SHOP</h1>
+                <input placeholder="Search for products..." class="search-bar" id="search-bar" type="text" onClick="Shop.searchProducts(this.value);" onKeyUp="Shop.searchProducts(this.value);"/>
+                <hr/>
+                <h3>CATEGORIES</h3>
+                <div class="products-list" id="products-list"></div>
+            </aside>
+            <article class="middle shop">
+                <div class="products-container" id="products-container"></div>
+            </article>
+            <aside class="right shop">
+                <h3>FEEDBACK</h3>
+                Want to help us improve our services? Submit your feedback and/or suggestions below - it'll help us more than you think!
+                <br/><textarea id="feedback-text-area" placeholder="Enter your feedback/suggestions here."></textarea>
+                <button onclick="submitFeedback();">SUBMIT</button>
+                <hr/>
+                <h3>DONATE</h3>
+                Want to support us even further? You can now donate! Any amount is greatly appreciated.
+                <br/><button onclick="donate();">DONATE</button>
+                <hr/>
+                <div class="image-button-container">
+                    <a href="employment.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/employment-button.jpg);">WE'RE HIRING</h3>
+                            <span>We are searching for new staff! If you are in search for a job, we'd love to see your resume!</span>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </div>
+        <footer>Copyright &copy; Vishnu Gunapathi 2016</footer>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solarity | Home</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="css/stylesheet.css" rel="stylesheet"/>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/coverSolarSystem.js" type="text/javascript"></script>
+        <script src="js/navResize.js" type="text/javascript"></script>
+        <script src="js/login.js" type="text/javascript"></script>
+        <script src="js/feedbackDonate.js" type="text/javascript"></script>
+    </head>
+    <body onload="main(); initLogin();">
+        <div class="cover" id="cover">
+            <canvas id="canvas">
+                <span> Please install Google Chrome. </span>
+            </canvas>
+            <canvas id="background"></canvas>
+        	<h1>EXPLORE THE SOLAR SYSTEM</h1>
+            <div class="cover-nav-container">
+                <nav>
+                    <div>
+                        <a href="index.html"><div class="nav-logo">&#9728; SOLARITY</div></a>
+                        <div class="nav-button">
+                            LEARN
+                            <br/>
+                            <div class="drop-interface">
+                                <a href="explorer.html"><button>EXPLORE</button><br/></a>
+                                <a href="learnMore.html"><button>LEARN MORE</button><br/></a>
+                                <a href="employment.html"><button>EMPLOYMENT</button><br/></a>
+                            </div>
+                        </div>
+                        <a href="about.html"><div class="nav-button">ABOUT</div></a>
+                        <a href="shop.html"><div class="nav-button">SHOP</div></a>
+                        <div class="nav-button" id="login-button"><span id="login-text">LOGIN</span><br/>
+                            <div class="drop-interface" id="login-interface">
+                                <form id="login-form" name="loginForm">
+                                    Username&nbsp;&nbsp;<input id="login-username" type="text" placeholder="myUsername"/><br/>
+                                    Password&nbsp;&nbsp;<input id="login-password" type="password" placeholder="myPassword123"/><br/>
+                                    <span id="login-error-text"></span>
+                                    <input onclick="login(loginUsername.value, loginPassword.value);" value="LOGIN" type="button"/><br/>
+                                    Don't have an account?<br/><a href="createAccount.html"><input value="CREATE ACCOUNT" type="button"/></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <article>
+                <h1>BEGIN YOUR JOURNEY</h1>
+                There are a plethora of activities to engage in to extend your mind and understanding of space.
+                More activities will become available soon, so be sure to check back here frequently.
+                <br/><br/>
+                <div class="image-button-container">
+                    <a href="explorer.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/explorer-button.jpg);">EXPLORE</h3>
+                            <span>Explore our solar system in this interactive application!<br/>Click here to begin exploring!</span>
+                        </div>
+                    </a>
+                    <a href="learnMore.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/learnmore-button.jpg);">LEARN MORE</h3>
+                            <span>Learn more by reading official scientific publications from organisations like SETI and NASA!</span>
+                        </div>
+                    </a>
+                    <a href="employment.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/employment-button.jpg);">WE'RE HIRING</h3>
+                            <span>We are searching for new staff! If you are in search for a job, we'd love to see your resume!</span>
+                        </div>
+                    </a>
+                    <a href="shop.html">
+                        <div class="image-button">
+                            <h3 style="background-image: url(img/buttons/shop-button.jpg);">SHOP</h3>
+                            <span>Browse and purchase some of our awesome collectable items, accessories, and other merch!</span>
+                        </div>
+                    </a>
+                </div>
+            </article>
+            <aside class="right">
+                <h3>FEEDBACK</h3>
+                Want to help us improve our services? Submit your feedback and/or suggestions below - it'll help us more than you think!
+                <br/><textarea id="feedback-text-area" placeholder="Enter your feedback/suggestions here."></textarea>
+                <button onclick="submitFeedback();">SUBMIT</button>
+                <hr/>
+                <h3>DONATE</h3>
+                Want to support us even further? You can now donate! Any amount is greatly appreciated.
+                <br/><button onclick="donate();">DONATE</button>
+            </aside>
+        </div>
+        <footer>Copyright &copy; Vishnu Gunapathi 2016</footer>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solarity | Explorer</title>
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="js/explorer.js"> </script>
+        <style>
+            html, body {
+                padding: 0;
+                margin: 0;
+                background-color: black;
+            }
+            body * {
+                transition: all 0.14s ease;
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+                -ms-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            #background, #canvas, #overlay, #overlay2 {
+                margin: auto auto;
+                padding: 0;
+                display: block;
+                position: absolute;
+                left: 0; top: 0;
+            }
+            #background {
+                z-index: 19;
+                background: linear-gradient(to top right, rgba(100, 0, 40, 1), rgb(40, 10, 50), rgb(20, 10, 40));
+            }
+            #canvas {z-index: 20;}
+            #overlay {z-index: 21;}
+            #overlay2 {z-index: 22;}
+
+            #container {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+			span {
+				font-family: sans-serif;
+				color: white;
+				font-size: 16px;
+                text-align: center;
+			}
+            button {
+                position: fixed;
+                z-index: 100;
+                bottom: 20px;
+                left: 20px;
+                background-color: white;
+                color: black;
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                padding: 10px 20px;
+                font-size: 17px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            button:hover {
+                background-color: crimson;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body onload="main()">
+        <div id="container">
+            <a href="index.html"><button>RETURN TO WEBSITE</button></a>
+            <canvas id="background"></canvas>
+            <canvas id="canvas">
+                <span>Please install Google Chrome.</span>
+            </canvas>
+            <canvas id="overlay"></canvas>
+            <canvas id="overlay2"></canvas>
+        </div>
+    </body>
+</html>
